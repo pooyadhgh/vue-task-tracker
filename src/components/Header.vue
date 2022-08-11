@@ -5,6 +5,7 @@
       :text="shouldShowAddTask ? 'Close' : 'Add Task'"
       :color="shouldShowAddTask ? 'red' : 'green'"
       @btn-click="$emit('toggle-add-task')"
+      v-show="homePage"
     />
   </header>
 </template>
@@ -19,6 +20,12 @@ export default {
     shouldShowAddTask: Boolean,
   },
   components: { Button },
+  computed: {
+    homePage() {
+      if (this.$route.path === "/") return true;
+      return false;
+    },
+  },
 };
 </script>
 
