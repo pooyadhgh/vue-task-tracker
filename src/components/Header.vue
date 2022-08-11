@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Button from "./Button.vue"
+import Button from "./Button.vue";
 
 export default {
   name: "Header",
@@ -19,7 +19,7 @@ export default {
     shouldShowAddTask: Boolean,
   },
   components: { Button },
-}
+};
 </script>
 
 <style scoped>

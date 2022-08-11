@@ -30,29 +30,29 @@ export default {
       text: "",
       day: "",
       reminder: false,
-    }
+    };
   },
   methods: {
     onSubmit(e) {
-      e.preventDefault()
+      e.preventDefault();
       if (!this.text) {
-        alert("Please add a task")
-        return
+        alert("Please add a task");
+        return;
       }
 
       const newTask = {
         text: this.text,
         day: this.day,
         reminder: this.reminder,
-      }
+      };
 
-      this.$emit("add-task", newTask)
-      this.text = ""
-      this.day = ""
-      this.reminder = false
+      this.$emit("add-task", newTask);
+      this.text = "";
+      this.day = "";
+      this.reminder = false;
     },
   },
-}
+};
 </script>
 
 <style scoped>
